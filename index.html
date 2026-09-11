@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vittara | Premium Real Estate in Kharadi, Pune</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#000E29',
+                        gold: '#F3C24C',
+                        'dark-gold': '#9D6510',
+                        'off-white': '#FAFAF8',
+                        'light-cream': '#F5F3EE',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter text-navy bg-white overflow-x-hidden">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-navy flex items-center justify-center transition-opacity duration-700">
+        <div class="text-center">
+            <div class="w-20 h-20 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <h2 class="text-gold font-playfair text-2xl tracking-wider animate-pulse">VITTARA</h2>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 z-50">
+                    <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center shadow-lg">
+                        <span class="font-playfair text-navy font-extrabold text-xl">V</span>
+                    </div>
+                    <div>
+                        <span class="font-playfair text-2xl font-bold tracking-wider text-white nav-logo-text transition-colors duration-300">VITTARA</span>
+                        <p class="text-[10px] tracking-[3px] text-gold uppercase -mt-1">Premium Realty</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#home" class="nav-link active px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-all duration-300 relative">Home</a>
+                    <a href="#properties" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-all duration-300 relative">Properties</a>
+                    <a href="#about" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-all duration-300 relative">About</a>
+                    <a href="#services" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-all duration-300 relative">Services</a>
+                    <a href="#areas" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-all duration-300 relative">Areas</a>
+                    <a href="#testimonials" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-all duration-300 relative">Testimonials</a>
+                    <a href="#faq" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-all duration-300 relative">FAQ</a>
+                    <a href="#contact" class="ml-4 px-6 py-2.5 bg-gold text-navy font-semibold text-sm rounded-full hover:bg-dark-gold hover:text-white transition-all duration-300 shadow-lg hover:shadow-gold/30 hover:scale-105 transform">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden z-50 w-10 h-10 flex flex-col items-center justify-center space-y-1.5 group" aria-label="Toggle menu">
+                    <span class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-gold"></span>
+                    <span class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-gold"></span>
+                    <span class="hamburger-line w-4 h-0.5 bg-white transition-all duration-300 group-hover:bg-gold ml-auto"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="fixed inset-0 bg-[#0b2a5b] backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 lg:hidden">
+            <div class="flex flex-col items-center justify-center h-full space-y-6">
+                <a href="#home" class="mobile-nav-link text-3xl font-playfair text-white hover:text-gold transition-all duration-300" onclick="closeMobileMenu()">Home</a>
+                <a href="#properties" class="mobile-nav-link text-3xl font-playfair text-white hover:text-gold transition-all duration-300" onclick="closeMobileMenu()">Properties</a>
+                <a href="#about" class="mobile-nav-link text-3xl font-playfair text-white hover:text-gold transition-all duration-300" onclick="closeMobileMenu()">About</a>
+                <a href="#services" class="mobile-nav-link text-3xl font-playfair text-white hover:text-gold transition-all duration-300" onclick="closeMobileMenu()">Services</a>
+                <a href="#areas" class="mobile-nav-link text-3xl font-playfair text-white hover:text-gold transition-all duration-300" onclick="closeMobileMenu()">Areas</a>
+                <a href="#testimonials" class="mobile-nav-link text-3xl font-playfair text-white hover:text-gold transition-all duration-300" onclick="closeMobileMenu()">Testimonials</a>
+                <a href="#faq" class="mobile-nav-link text-3xl font-playfair text-white hover:text-gold transition-all duration-300" onclick="closeMobileMenu()">FAQ</a>
+                <a href="#contact" class="mt-4 px-8 py-3 bg-gold text-navy font-bold text-lg rounded-full hover:bg-dark-gold transition-all duration-300" onclick="closeMobileMenu()">Contact Us</a>
+                <div class="flex space-x-6 mt-8">
+                    <a href="#" class="text-gold hover:text-white transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-gold hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gold hover:text-white transition-colors"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="#" class="text-gold hover:text-white transition-colors"><i class="fab fa-youtube text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="relative h-screen min-h-[700px] overflow-hidden">
+        <!-- Slider -->
+        <div id="heroSlider" class="absolute inset-0">
+<div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000"
+                 style="background: linear-gradient(90deg, rgba(0,14,41,0.8) 0%, rgba(0,14,41,0.55) 45%, rgba(0,14,41,0.25) 100%), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80') center/cover no-repeat;">
+            </div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000"
+                 style="background: linear-gradient(90deg, rgba(0,14,41,0.8) 0%, rgba(0,14,41,0.55) 45%, rgba(0,14,41,0.25) 100%), url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=80') center/cover no-repeat;">
+            </div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000"
+                 style="background: linear-gradient(90deg, rgba(0,14,41,0.8) 0%, rgba(0,14,41,0.55) 45%, rgba(0,14,41,0.25) 100%), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80') center/cover no-repeat;">
+            </div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000"
+                 style="background: linear-gradient(90deg, rgba(0,14,41,0.8) 0%, rgba(0,14,41,0.55) 45%, rgba(0,14,41,0.25) 100%), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80') center/cover no-repeat;">
+            </div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000"
+                 style="background: linear-gradient(135deg, rgba(0,14,41,0.85) 0%, rgba(0,14,41,0.6) 50%, rgba(0,14,41,0.4) 100%), url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=80') center/cover no-repeat;">
+            </div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000"
+                 style="background: linear-gradient(135deg, rgba(0,14,41,0.85) 0%, rgba(0,14,41,0.6) 50%, rgba(0,14,41,0.4) 100%), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80') center/cover no-repeat;">
+            </div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000"
+                 style="background: linear-gradient(135deg, rgba(0,14,41,0.85) 0%, rgba(0,14,41,0.6) 50%, rgba(0,14,41,0.4) 100%), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80') center/cover no-repeat;">
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 right-10 w-72 h-72 border border-gold/10 rounded-full animate-pulse-slow hidden lg:block"></div>
+        <div class="absolute bottom-20 left-10 w-48 h-48 border border-gold/10 rounded-full animate-pulse-slow hidden lg:block" style="animation-delay: 2s;"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 h-full flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="max-w-3xl">
+                    <div class="flex items-center space-x-3 mb-6 animate-fade-in-up">
+                        <div class="w-12 h-[2px] bg-gold"></div>
+                        <span class="text-gold font-medium tracking-[4px] uppercase text-sm">Welcome to Vittara</span>
+                    </div>
+                    <h1 class="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        Discover Your<br>
+                        <span class="text-gold italic">Dream Home</span><br>
+                        in Pune
+                    </h1>
+                    <p class="text-white/80 text-lg md:text-xl max-w-xl mb-10 leading-relaxed animate-fade-in-up" style="animation-delay: 0.4s;">
+                        Premium properties in Kharadi & across Pune. Experience luxury living with Vittara's curated collection of elite residences.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <a href="#properties" class="group px-8 py-4 bg-gold text-navy font-bold text-base rounded-full hover:bg-dark-gold hover:text-white transition-all duration-300 shadow-xl hover:shadow-gold/30 text-center flex items-center justify-center space-x-2 hover:scale-105 transform">
+                            <span>Explore Properties</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 border-2 border-white/30 text-white font-semibold text-base rounded-full hover:border-gold hover:text-gold transition-all duration-300 text-center backdrop-blur-sm hover:scale-105 transform">
+                            Schedule Visit
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-2xl animate-fade-in-up" style="animation-delay: 0.8s;">
+                    <div class="text-center border-r border-white/10 last:border-r-0">
+                        <div class="text-3xl md:text-4xl font-playfair font-bold text-gold counter" data-target="500">0</div>
+                        <div class="text-white/60 text-sm mt-1">Properties Sold</div>
+                    </div>
+                    <div class="text-center border-r border-white/10 last:border-r-0">
+                        <div class="text-3xl md:text-4xl font-playfair font-bold text-gold counter" data-target="1200">0</div>
+                        <div class="text-white/60 text-sm mt-1">Happy Families</div>
+                    </div>
+                    <div class="text-center border-r border-white/10 last:border-r-0">
+                        <div class="text-3xl md:text-4xl font-playfair font-bold text-gold counter" data-target="15">0</div>
+                        <div class="text-white/60 text-sm mt-1">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-playfair font-bold text-gold counter" data-target="50">0</div>
+                        <div class="text-white/60 text-sm mt-1">Areas Covered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+            <button class="slider-dot w-3 h-3 rounded-full bg-gold transition-all duration-300" data-slide="0"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300" data-slide="1"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300" data-slide="2"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300" data-slide="3"></button>
+        </div>
+
+        <!-- Slider Arrows -->
+        <button class="slider-prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 bg-white/10 hover:bg-gold text-white hover:text-navy border border-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 bg-white/10 hover:bg-gold text-white hover:text-navy border border-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        </section>
+
+    <!-- ==================== PROPERTIES SECTION ==================== -->
+    <section id="properties" class="py-24 bg-off-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-animate">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                    <span class="text-dark-gold font-semibold tracking-[4px] uppercase text-sm">Our Portfolio</span>
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                </div>
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">Featured <span class="text-gold italic">Properties</span></h2>
+                <p class="text-navy/60 max-w-2xl mx-auto text-lg">Handpicked luxury properties in Pune's most coveted neighborhoods.</p>
+            </div>
+
+            <!-- Property Cards Grid -->
+            <div id="propertyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be injected by JS -->
+            </div>
+
+            <!-- No Results -->
+            <div id="noResults" class="hidden text-center py-16">
+                <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                <h3 class="text-2xl font-playfair font-bold text-navy mb-2">No Properties Found</h3>
+                <p class="text-navy/60">Try adjusting your search filters to find more properties.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Image Collage -->
+                <div class="relative scroll-animate">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80" alt="Luxury Interior" class="w-full h-48 object-cover">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80" alt="Modern Kitchen" class="w-full h-64 object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <div class="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" alt="Premium Home" class="w-full h-64 object-cover">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500">
+                                <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=400&q=80" alt="Living Room" class="w-full h-48 object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-navy text-white p-6 rounded-2xl shadow-2xl hidden sm:block">
+                        <div class="text-center">
+                            <span class="block text-4xl font-playfair font-bold text-gold">15+</span>
+                            <span class="text-sm text-white/80">Years of<br>Excellence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="scroll-animate">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-[2px] bg-gold"></div>
+                        <span class="text-dark-gold font-semibold tracking-[4px] uppercase text-sm">About Us</span>
+                    </div>
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-6">
+                        Redefining <span class="text-gold italic">Luxury</span> Real Estate in Pune
+                    </h2>
+                    <p class="text-navy/70 text-lg leading-relaxed mb-6">
+                        Vittara is Pune's premier real estate consultancy, headquartered in the thriving IT hub of Kharadi. With over 15 years of expertise, we specialize in connecting discerning buyers with the finest properties across Pune.
+                    </p>
+                    <p class="text-navy/70 leading-relaxed mb-8">
+                        Our dedicated team of real estate professionals understands that buying a home is more than a transaction — it's a life-defining moment. We bring integrity, market knowledge, and personalized service to every client relationship, ensuring your property journey is seamless and rewarding.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-gem text-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">Premium Selection</h4>
+                                <p class="text-sm text-navy/60">Curated luxury properties</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-handshake text-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">Trusted Partners</h4>
+                                <p class="text-sm text-navy/60">RERA registered agents</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-chart-line text-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">Market Experts</h4>
+                                <p class="text-sm text-navy/60">Deep local knowledge</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-shield-alt text-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">100% Transparent</h4>
+                                <p class="text-sm text-navy/60">No hidden charges</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder & CTA -->
+                    <div class="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-10 mb-8">
+                        <!-- Left: Button -->
+                        <a href="#properties" class="inline-flex items-center space-x-2 px-8 py-4 bg-gold text-navy font-bold rounded-full hover:bg-dark-gold hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-shrink-0">
+                            <span>Our Portfolio</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <!-- Right: Founder Details -->
+                        <div class="text-center sm:text-left">
+                            <h3 class="font-playfair text-xl md:text-2xl font-bold text-[#000E29] leading-tight whitespace-nowrap">Mr. Harshwardhan Kaudgave Patil</h3>
+                            <div class="mt-2">
+                                <p class="text-xs font-semibold text-gray-500 uppercase tracking-[3px]">Founder & CEO</p>
+                                <div class="w-12 h-[2px] bg-[#F3C24C] mt-2 mx-auto sm:mx-0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="py-24 bg-navy relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 w-96 h-96 border border-gold rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 border border-gold rounded-full"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                    <span class="text-gold font-semibold tracking-[4px] uppercase text-sm">What We Offer</span>
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                </div>
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">Our <span class="text-gold italic">Services</span></h2>
+                <p class="text-white/60 max-w-2xl mx-auto text-lg">Comprehensive real estate solutions tailored to your needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-gold/10 hover:border-gold/30 transition-all duration-500 scroll-animate hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-home text-gold text-2xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white mb-3">Property Buying</h3>
+                    <p class="text-white/60 leading-relaxed">Find your dream home with our expert guidance. From luxury villas to premium apartments, we have it all.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-gold/10 hover:border-gold/30 transition-all duration-500 scroll-animate hover:-translate-y-2" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-key text-gold text-2xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white mb-3">Property Selling</h3>
+                    <p class="text-white/60 leading-relaxed">Get the best value for your property with our market expertise, professional marketing, and wide buyer network.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-gold/10 hover:border-gold/30 transition-all duration-500 scroll-animate hover:-translate-y-2" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-building text-gold text-2xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white mb-3">Rental Services</h3>
+                    <p class="text-white/60 leading-relaxed">Whether you're a tenant or landlord, we facilitate hassle-free rental experiences with verified listings.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-gold/10 hover:border-gold/30 transition-all duration-500 scroll-animate hover:-translate-y-2" style="animation-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-chart-pie text-gold text-2xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white mb-3">Investment Advisory</h3>
+                    <p class="text-white/60 leading-relaxed">Maximize your returns with our data-driven property investment advisory and portfolio management services.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-gold/10 hover:border-gold/30 transition-all duration-500 scroll-animate hover:-translate-y-2" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-file-contract text-gold text-2xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white mb-3">Legal Assistance</h3>
+                    <p class="text-white/60 leading-relaxed">Complete legal support including documentation, RERA compliance, title verification, and registration assistance.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-gold/10 hover:border-gold/30 transition-all duration-500 scroll-animate hover:-translate-y-2" style="animation-delay: 0.5s;">
+                    <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-ruler-combined text-gold text-2xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-white mb-3">Interior Design</h3>
+                    <p class="text-white/60 leading-relaxed">Transform your space with our partner interior designers. Bespoke designs that reflect your personality and taste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                    <span class="text-dark-gold font-semibold tracking-[4px] uppercase text-sm">Why Vittara</span>
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                </div>
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">Why Choose <span class="text-gold italic">Us</span></h2>
+                <p class="text-navy/60 max-w-2xl mx-auto text-lg">Experience the Vittara difference — where luxury meets trust.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group scroll-animate">
+                    <div class="w-20 h-20 bg-navy rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 transform shadow-xl">
+                        <i class="fas fa-award text-gold text-3xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy mb-3">RERA Registered</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">All our properties and services are fully RERA compliant for your peace of mind.</p>
+                </div>
+                <div class="text-center group scroll-animate" style="animation-delay: 0.1s;">
+                    <div class="w-20 h-20 bg-navy rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 transform shadow-xl">
+                        <i class="fas fa-users text-gold text-3xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy mb-3">Expert Team</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">Our team of 50+ certified agents brings decades of combined experience.</p>
+                </div>
+                <div class="text-center group scroll-animate" style="animation-delay: 0.2s;">
+                    <div class="w-20 h-20 bg-navy rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 transform shadow-xl">
+                        <i class="fas fa-rupee-sign text-gold text-3xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy mb-3">Best Price Guarantee</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">We negotiate the best deals ensuring maximum value for your investment.</p>
+                </div>
+                <div class="text-center group scroll-animate" style="animation-delay: 0.3s;">
+                    <div class="w-20 h-20 bg-navy rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 transform shadow-xl">
+                        <i class="fas fa-headset text-gold text-3xl group-hover:text-navy transition-colors"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-navy mb-3">24/7 Support</h3>
+                    <p class="text-navy/60 text-sm leading-relaxed">Round-the-clock assistance via phone, WhatsApp, and in-person meetings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AREAS WE SERVE ==================== -->
+    <section id="areas" class="py-24 bg-off-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-animate">
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <i class="fas fa-map-marker-alt text-gold text-sm"></i>
+                    <span class="text-dark-gold font-semibold tracking-[4px] uppercase text-sm">Prime Locations</span>
+                </div>
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">Explore by <span class="text-gold italic">Location</span></h2>
+                <p class="text-navy/60 max-w-2xl mx-auto text-lg mb-10">Discover our exclusive residences across Pune's finest neighbourhoods.</p>
+
+                <!-- Filter Buttons -->
+                <div id="locationFilters" class="flex flex-nowrap sm:flex-wrap items-center justify-start sm:justify-center gap-3 overflow-x-auto pb-2 -mx-2 px-2 sm:mx-0 sm:px-0 scrollbar-hide">
+                    <button class="location-btn active flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-md" data-filter="all">All</button>
+                    <button class="location-btn flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border border-gray-200" data-filter="kharadi">Kharadi</button>
+                    <button class="location-btn flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border border-gray-200" data-filter="mundhava">Mundhava</button>
+                    <button class="location-btn flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border border-gray-200" data-filter="keshavnagar">Keshavnagar</button>
+                    <button class="location-btn flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border border-gray-200" data-filter="viman-nagar">Viman Nagar</button>
+                    <button class="location-btn flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border border-gray-200" data-filter="kalyani-nagar">Kalyani Nagar</button>
+                    <button class="location-btn flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border border-gray-200" data-filter="koregaon-park">Koregaon Park</button>
+                    <button class="location-btn flex-shrink-0 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border border-gray-200" data-filter="hadapsar">Hadapsar</button>
+                </div>
+            </div>
+
+            <div id="locationGrid" class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="kharadi">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=70" alt="Kharadi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Kharadi</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">120+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="kharadi">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=70" alt="Kharadi Residence" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Kharadi</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">120+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="kharadi">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=400&q=70" alt="Kharadi Home" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Kharadi</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">120+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="mundhava">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=70" alt="Mundhava" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Mundhava</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">45+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="mundhava">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=70" alt="Mundhava Residence" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Mundhava</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">45+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="mundhava">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&q=70" alt="Mundhava Home" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Mundhava</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">45+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="keshavnagar">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=70" alt="Keshavnagar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Keshavnagar</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">55+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="viman-nagar">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=70" alt="Viman Nagar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Viman Nagar</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">95+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="kalyani-nagar">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=70" alt="Kalyani Nagar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Kalyani Nagar</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">70+ Properties</p>
+                    </div>
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-gold/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <i class="fas fa-arrow-right text-white text-xs"></i>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="koregaon-park">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=70" alt="Koregaon Park" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Koregaon Park</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">60+ Properties</p>
+                    </div>
+                </div>
+
+                <div class="location-card group relative rounded-2xl overflow-hidden h-48 md:h-56 cursor-pointer scroll-animate shadow-lg transition-all duration-500" data-location="hadapsar">
+                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&q=70" alt="Hadapsar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent group-hover:from-gold/90 transition-all duration-500"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="font-playfair text-lg font-bold text-white">Hadapsar</h3>
+                        <p class="text-white/70 text-xs group-hover:text-navy transition-colors">90+ Properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                    <span class="text-dark-gold font-semibold tracking-[4px] uppercase text-sm">Testimonials</span>
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                </div>
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">What Our <span class="text-gold italic">Clients</span> Say</h2>
+                <p class="text-navy/60 max-w-2xl mx-auto text-lg">Real stories from real families who found their dream homes with Vittara.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-off-white rounded-2xl p-8 relative scroll-animate hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-2 transform">
+                    <div class="absolute -top-4 left-8">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-quote-left text-navy text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="flex text-gold mb-4 mt-4">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-navy/70 leading-relaxed mb-6">"Vittara made our dream of owning a home in Kharadi a reality. Their team was incredibly professional and guided us through every step. Highly recommended!"</p>
+                    <div class="flex items-center space-x-3 border-t border-gray-200 pt-4">
+                        <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+                            <span class="text-gold font-bold">RP</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy">Rajesh & Priya Sharma</h4>
+                            <p class="text-sm text-navy/50">3 BHK in Kharadi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-off-white rounded-2xl p-8 relative scroll-animate hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-2 transform" style="animation-delay: 0.1s;">
+                    <div class="absolute -top-4 left-8">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-quote-left text-navy text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="flex text-gold mb-4 mt-4">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+                    </div>
+                    <p class="text-navy/70 leading-relaxed mb-6">"As an NRI, I was worried about investing in Pune. Vittara handled everything from property selection to registration. Exceptional service and transparency!"</p>
+                    <div class="flex items-center space-x-3 border-t border-gray-200 pt-4">
+                        <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+                            <span class="text-gold font-bold">AK</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy">Amit Kulkarni</h4>
+                            <p class="text-sm text-navy/50">Villa in Baner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-off-white rounded-2xl p-8 relative scroll-animate hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-2 transform" style="animation-delay: 0.2s;">
+                    <div class="absolute -top-4 left-8">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-quote-left text-navy text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="flex text-gold mb-4 mt-4">
+                        <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star-half-alt text-sm"></i>
+                    </div>
+                    <p class="text-navy/70 leading-relaxed mb-6">"The Vittara team understood my investment goals perfectly. They helped me identify the best properties for rental income in Hinjewadi. Outstanding ROI so far!"</p>
+                    <div class="flex items-center space-x-3 border-t border-gray-200 pt-4">
+                        <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+                            <span class="text-gold font-bold">SM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy">Sneha Mehta</h4>
+                            <p class="text-sm text-navy/50">Investor, Hinjewadi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section id="faq" class="py-24 bg-off-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                    <span class="text-dark-gold font-semibold tracking-[4px] uppercase text-sm">FAQ</span>
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                </div>
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">Frequently Asked <span class="text-gold italic">Questions</span></h2>
+                <p class="text-navy/60 max-w-2xl mx-auto text-lg">Everything you need to know about buying property with Vittara.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm scroll-animate">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-navy pr-4">What areas does Vittara cover in Pune?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-5 hidden">
+                        <p class="text-navy/70 leading-relaxed">Vittara covers all major areas in Pune including Kharadi, Viman Nagar, Hinjewadi, Baner, Wakad, Hadapsar, Koregaon Park, Kalyani Nagar, Wagholi, Undri, NIBM, and many more. Our headquarters is in Kharadi, making us particularly strong in the East Pune market.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm scroll-animate">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-navy pr-4">Is Vittara RERA registered?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-5 hidden">
+                        <p class="text-navy/70 leading-relaxed">Yes, Vittara is a fully RERA-compliant real estate consultancy. All properties we list are verified and RERA registered, ensuring complete transparency and legal safety for our clients.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm scroll-animate">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-navy pr-4">Do you charge any brokerage fees?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-5 hidden">
+                        <p class="text-navy/70 leading-relaxed">Our brokerage structure is transparent and competitive. For new project bookings, we often offer zero brokerage deals. For resale properties, our fee is 1-2% which is among the lowest in the industry. We always discuss fees upfront with no hidden charges.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm scroll-animate">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-navy pr-4">Can you help with home loans?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-5 hidden">
+                        <p class="text-navy/70 leading-relaxed">Absolutely! We have partnerships with all major banks and NBFCs including SBI, HDFC, ICICI, and Axis Bank. Our financial team helps you get pre-approved loans at the best interest rates with minimal documentation hassle.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm scroll-animate">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-navy pr-4">How can I schedule a property site visit?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-5 hidden">
+                        <p class="text-navy/70 leading-relaxed">You can schedule a site visit by filling our contact form, using the AI chatbot on this website, calling us directly, or sending a WhatsApp message. We arrange complimentary site visits with pickup and drop facility for multiple properties in a single day.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm scroll-animate">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-navy pr-4">Do you help NRIs with property purchases?</span>
+                        <i class="fas fa-chevron-down text-gold transition-transform duration-300 flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-5 hidden">
+                        <p class="text-navy/70 leading-relaxed">Yes, we have a dedicated NRI desk that handles everything from virtual property tours to power of attorney, documentation, registration, and property management. Many NRIs trust Vittara for their Pune property investments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-animate">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                    <span class="text-dark-gold font-semibold tracking-[4px] uppercase text-sm">Get in Touch</span>
+                    <div class="w-8 h-[2px] bg-gold"></div>
+                </div>
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">Contact <span class="text-gold italic">Us</span></h2>
+                <p class="text-navy/60 max-w-2xl mx-auto text-lg">Ready to find your dream home? Get in touch with our team today.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-off-white rounded-2xl p-8 md:p-10 scroll-animate border border-gray-100">
+                    <h3 class="font-playfair text-2xl font-bold text-navy mb-6">Send Us a Message</h3>
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs font-semibold text-navy/60 uppercase tracking-wider mb-1 block">Full Name *</label>
+                                <input type="text" id="contactName" required placeholder="Your full name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-navy focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all text-sm">
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-navy/60 uppercase tracking-wider mb-1 block">Phone *</label>
+                                <input type="tel" id="contactPhone" required placeholder="+91 XXXXX XXXXX" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-navy focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-xs font-semibold text-navy/60 uppercase tracking-wider mb-1 block">Email</label>
+                            <input type="email" id="contactEmail" placeholder="your@email.com" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-navy focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all text-sm">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs font-semibold text-navy/60 uppercase tracking-wider mb-1 block">Interest</label>
+                                <select id="contactInterest" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-navy focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all text-sm">
+                                    <option value="Buy">Buy Property</option>
+                                    <option value="Sell">Sell Property</option>
+                                    <option value="Rent">Rent Property</option>
+                                    <option value="Invest">Investment</option>
+                                    <option value="Site Visit">Site Visit</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-xs font-semibold text-navy/60 uppercase tracking-wider mb-1 block">Budget</label>
+                                <select id="contactBudget" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-navy focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all text-sm">
+                                    <option value="Under 50L">Under ₹50 Lakhs</option>
+                                    <option value="50L-1Cr">₹50L - ₹1 Crore</option>
+                                    <option value="1Cr-2Cr">₹1Cr - ₹2 Crore</option>
+                                    <option value="2Cr+">₹2 Crore+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-xs font-semibold text-navy/60 uppercase tracking-wider mb-1 block">Message</label>
+                            <textarea id="contactMessage" rows="4" placeholder="Tell us about your requirements..." class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-navy focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-all text-sm resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-navy text-gold font-bold rounded-xl hover:bg-gold hover:text-navy transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 transform hover:scale-[1.02]">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Send via WhatsApp</span>
+                        </button>
+                        <p class="text-xs text-navy/40 text-center">Your message will be sent directly to our WhatsApp for fastest response.</p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="scroll-animate">
+                    <div class="space-y-6">
+                        <!-- Office -->
+                        <div class="bg-navy rounded-2xl p-8 text-white">
+                            <h3 class="font-playfair text-xl font-bold text-gold mb-6">Our Office</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-gold"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Address</h4>
+                                        <p class="text-white/70 text-sm">Vittara Real Estate, World Trade Center,<br>Kharadi, Pune - 411014, Maharashtra</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-phone-alt text-gold"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Phone</h4>
+                                        <p class="text-white/70 text-sm">+91 98765 43210</p>
+                                        <p class="text-white/70 text-sm">+91 87654 32109</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-envelope text-gold"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <p class="text-white/70 text-sm">info@vittara.in</p>
+                                        <p class="text-white/70 text-sm">sales@vittara.in</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-clock text-gold"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Working Hours</h4>
+                                        <p class="text-white/70 text-sm">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                                        <p class="text-white/70 text-sm">Sunday: 10:00 AM - 5:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 h-64">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7955668098505!2d73.9370147!3d18.5530!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c3c3c3c3c3%3A0x0!2sKharadi%2C%20Pune!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <!-- Social -->
+                        <div class="flex items-center space-x-4">
+                            <span class="text-navy/60 text-sm font-semibold">Follow Us:</span>
+                            <a href="#" class="w-10 h-10 bg-navy rounded-lg flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:scale-110 transform"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 bg-navy rounded-lg flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:scale-110 transform"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 bg-navy rounded-lg flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:scale-110 transform"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="w-10 h-10 bg-navy rounded-lg flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:scale-110 transform"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="w-10 h-10 bg-navy rounded-lg flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:scale-110 transform"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-navy pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gold rounded-lg flex items-center justify-center">
+                            <span class="font-playfair text-navy font-extrabold text-lg">V</span>
+                        </div>
+                        <div>
+                            <span class="font-playfair text-xl font-bold tracking-wider text-white">VITTARA</span>
+                            <p class="text-[9px] tracking-[3px] text-gold uppercase -mt-1">Premium Realty</p>
+                        </div>
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed mb-6">Pune's premier luxury real estate consultancy, based in Kharadi. Helping families find their dream homes since 2009.</p>
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-4">
+                        <a href="#" class="w-11 h-11 bg-navy border border-gold text-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-navy hover:border-transparent hover:scale-110 transition-all duration-300 shadow-md" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-11 h-11 bg-navy border border-gold text-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-navy hover:border-transparent hover:scale-110 transition-all duration-300 shadow-md" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-11 h-11 bg-navy border border-gold text-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-navy hover:border-transparent hover:scale-110 transition-all duration-300 shadow-md" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-11 h-11 bg-navy border border-gold text-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-navy hover:border-transparent hover:scale-110 transition-all duration-300 shadow-md" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-gold font-playfair text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-chevron-right text-[8px] text-gold/50"></i><span>Home</span></a></li>
+                        <li><a href="#properties" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-chevron-right text-[8px] text-gold/50"></i><span>Properties</span></a></li>
+                        <li><a href="#about" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-chevron-right text-[8px] text-gold/50"></i><span>About Us</span></a></li>
+                        <li><a href="#services" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-chevron-right text-[8px] text-gold/50"></i><span>Services</span></a></li>
+                        <li><a href="#contact" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-chevron-right text-[8px] text-gold/50"></i><span>Contact</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Areas -->
+                <div>
+                    <h3 class="text-gold font-playfair text-lg font-bold mb-6">Popular Areas</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#areas" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-map-pin text-[8px] text-gold/50"></i><span>Kharadi</span></a></li>
+                        <li><a href="#areas" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-map-pin text-[8px] text-gold/50"></i><span>Mundhava</span></a></li>
+                        <li><a href="#areas" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-map-pin text-[8px] text-gold/50"></i><span>Keshavnagar</span></a></li>
+                        <li><a href="#areas" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-map-pin text-[8px] text-gold/50"></i><span>Viman Nagar</span></a></li>
+                        <li><a href="#areas" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-map-pin text-[8px] text-gold/50"></i><span>Kalyani Nagar</span></a></li>
+                        <li><a href="#areas" class="text-white/60 hover:text-gold transition-colors text-sm flex items-center space-x-2"><i class="fas fa-map-pin text-[8px] text-gold/50"></i><span>Koregaon Park</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-gold font-playfair text-lg font-bold mb-6">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-gold text-sm mt-1 flex-shrink-0"></i>
+                            <span class="text-white/60 text-sm">World Trade Center, Kharadi, Pune - 411014</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-gold text-sm flex-shrink-0"></i>
+                            <a href="tel:+919876543210" class="text-white/60 text-sm hover:text-gold transition-colors">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-gold text-sm flex-shrink-0"></i>
+                            <a href="mailto:info@vittara.in" class="text-white/60 text-sm hover:text-gold transition-colors">info@vittara.in</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fab fa-whatsapp text-gold text-sm flex-shrink-0"></i>
+                            <a href="https://wa.me/919876543210" target="_blank" class="text-white/60 text-sm hover:text-gold transition-colors">WhatsApp Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                <p class="text-white/40 text-sm">&copy; 2024 Vittara Real Estate. All Rights Reserved.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="text-white/40 hover:text-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-white/40 hover:text-gold transition-colors">Terms of Service</a>
+                    <a href="#" class="text-white/40 hover:text-gold transition-colors">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== PROPERTY MODAL ==================== -->
+    <div id="propertyModal" class="fixed inset-0 z-[2000] hidden">
+        <div class="absolute inset-0 bg-navy/80 backdrop-blur-sm" onclick="closePropertyModal()"></div>
+        <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="modalContent">
+                <!-- Modal content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CHATBOT ==================== -->
+    <div id="chatbotToggle" class="fixed bottom-28 left-6 z-[999] cursor-pointer group" onclick="toggleChatbot()">
+        <div class="relative">
+            <div class="w-14 h-14 bg-navy rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all duration-300 border-2 border-gold">
+                <i class="fas fa-robot text-gold text-xl"></i>
+            </div>
+            <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+            <div class="absolute -top-12 right-0 bg-navy text-gold text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity font-medium shadow-lg">
+                AI Assistant
+                <div class="absolute -bottom-1 right-4 w-2 h-2 bg-navy transform rotate-45"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="chatbotWindow" class="fixed bottom-28 left-6 z-[1000] w-[360px] max-w-[calc(100vw-2rem)] hidden">
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col" style="height: 520px;">
+            <!-- Chat Header -->
+            <div class="bg-navy p-4 flex items-center justify-between flex-shrink-0">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-robot text-gold"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-sm">Vittara AI Assistant</h4>
+                        <div class="flex items-center space-x-1">
+                            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <span class="text-green-400 text-xs">Online</span>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="toggleChatbot()" class="text-white/60 hover:text-white transition-colors">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50">
+                <!-- Messages injected by JS -->
+            </div>
+
+            <!-- Chat Input -->
+            <div id="chatInputArea" class="p-3 bg-white border-t border-gray-100 flex-shrink-0">
+                <div id="chatOptions" class="flex flex-wrap gap-2">
+                    <!-- Options injected by JS -->
+                </div>
+                <div id="chatTextInput" class="hidden flex space-x-2">
+                    <input type="text" id="chatInput" placeholder="Type your answer..." class="flex-1 px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-navy text-sm focus:ring-2 focus:ring-gold focus:border-gold outline-none" onkeypress="if(event.key==='Enter')sendChatMessage()">
+                    <button onclick="sendChatMessage()" class="px-4 py-2.5 bg-navy text-gold rounded-xl hover:bg-gold hover:text-navy transition-all">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FLOATING ACTION BUTTONS ==================== -->
+    <a href="https://wa.me/919876543210?text=Hi%20Vittara!%20I'm%20interested%20in%20properties%20in%20Pune." target="_blank" aria-label="Chat on WhatsApp" class="fab-btn fab-whatsapp fab-wa whatsapp-float">
+        <i class="fab fa-whatsapp leading-none"></i>
+    </a>
+
+    <a href="tel:+919876543210" aria-label="Call Vittara" class="fab-btn fab-call fab-2">
+        <i class="fas fa-phone-alt leading-none"></i>
+    </a>
+
+    <a href="mailto:info@vittara.in" aria-label="Email Vittara" class="fab-btn fab-email fab-3">
+        <i class="fas fa-envelope leading-none"></i>
+    </a>
+
+    <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" class="fab-btn fab-scroll fab-4">
+        <i class="fas fa-arrow-up leading-none"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/properties.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
