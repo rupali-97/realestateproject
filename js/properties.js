@@ -594,11 +594,11 @@ function openPropertyModal(id) {
                 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-3">
-                    <a href="https://wa.me/919876543210?text=${encodeURIComponent(`Hi Vittara! I'm interested in ${prop.title} (₹${prop.price}) at ${prop.area}. Please share more details.`)}" target="_blank" class="flex-1 py-3 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition-all flex items-center justify-center space-x-2 shadow-lg">
+                    <a href="https://wa.me/919766633032?text=${encodeURIComponent(`Hi Vittara! I'm interested in ${prop.title} (₹${prop.price}) at ${prop.area}. Please share more details.`)}" target="_blank" class="flex-1 py-3 bg-green-500 text-white font-bold rounded-xl hover:bg-green-600 transition-all flex items-center justify-center space-x-2 shadow-lg">
                         <i class="fab fa-whatsapp text-xl"></i>
                         <span>WhatsApp Enquiry</span>
                     </a>
-                    <a href="tel:+919876543210" class="flex-1 py-3 bg-navy text-gold font-bold rounded-xl hover:bg-gold hover:text-navy transition-all flex items-center justify-center space-x-2 shadow-lg">
+                    <a href="tel:+919766633032" class="flex-1 py-3 bg-navy text-gold font-bold rounded-xl hover:bg-gold hover:text-navy transition-all flex items-center justify-center space-x-2 shadow-lg">
                         <i class="fas fa-phone-alt"></i>
                         <span>Call Now</span>
                     </a>
@@ -644,7 +644,7 @@ function slideModal(dir) {
 function scheduleVisit(propertyName) {
   const msg = `Hi Vittara! I'd like to schedule a site visit for "${propertyName}". Please suggest available time slots.`;
   window.open(
-    `https://wa.me/919876543210?text=${encodeURIComponent(msg)}`,
+    `https://wa.me/919766633032?text=${encodeURIComponent(msg)}`,
     "_blank",
   );
 }

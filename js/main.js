@@ -157,7 +157,7 @@ ${message || "I would like to know more about your properties."}
 Please get in touch with me at the earliest. Thank you!`;
 
   window.open(
-    `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMsg)}`,
+    `https://wa.me/919766633032?text=${encodeURIComponent(whatsappMsg)}`,
     "_blank",
   );
 

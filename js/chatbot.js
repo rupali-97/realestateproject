@@ -270,7 +270,7 @@ function finishChat() {
       const whatsappMsg = `Hi Vittara! 🏠\n\nI'm interested in the following:\n\n📋 Purpose: ${d.purpose}\n🏠 Type: ${d.propertyType}\n💰 Budget: ${d.budget}\n📍 Location: ${d.location}\n🛏️ BHK: ${d.bhk}\n📅 Preferred Visit: ${d.timeSlot}\n\n👤 Name: ${d.name}\n📱 Phone: ${d.phone}\n\nPlease share suitable properties. Thank you!`;
 
       waBtn.innerHTML = `
-                <a href="https://wa.me/919876543210?text=${encodeURIComponent(whatsappMsg)}" target="_blank" class="inline-flex items-center space-x-2 px-5 py-2.5 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-all text-sm font-semibold shadow-lg">
+                <a href="https://wa.me/919766633032?text=${encodeURIComponent(whatsappMsg)}" target="_blank" class="inline-flex items-center space-x-2 px-5 py-2.5 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-all text-sm font-semibold shadow-lg">
                     <i class="fab fa-whatsapp text-lg"></i>
                     <span>Send on WhatsApp</span>
                 </a>
