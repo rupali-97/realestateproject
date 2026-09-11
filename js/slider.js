@@ -6,8 +6,10 @@ const dots = document.querySelectorAll(".slider-dot");
 
 function goToSlide(index) {
   slides.forEach((slide, i) => {
+    slide.style.transition = "opacity 1s ease";
     slide.style.opacity = i === index ? "1" : "0";
   });
+
   dots.forEach((dot, i) => {
     dot.classList.toggle("bg-gold", i === index);
     dot.classList.toggle("bg-white/30", i !== index);
@@ -22,7 +24,7 @@ function nextSlide() {
 }
 
 function startSlider() {
-  slideInterval = setInterval(nextSlide, 5000);
+  slideInterval = setInterval(nextSlide, 3000);
 }
 
 function stopSlider() {
@@ -32,6 +34,8 @@ function stopSlider() {
 // Initialize slider
 if (slides.length > 0) {
   goToSlide(0);
+  const heroText = document.querySelector(".hero-text-animate");
+  if (heroText) heroText.classList.add("animate-text-enter");
   startSlider();
 
   // Dot click handlers
